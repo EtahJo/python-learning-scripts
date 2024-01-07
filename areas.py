@@ -47,3 +47,4 @@ def area_hero(side1, side2, side3):
 
 print(area_hero(3, 4, 5))
 print(area_hero(10.5, 6, 9.3))
+print(area_hero(5, 6, 7))
