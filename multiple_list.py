@@ -43,3 +43,43 @@ def count_matches(str1, str2):
 
 print(count_matches("ate", "ape"))
 print(count_matches("hard", "head"))
+
+
+def calculate_average(asn_grade):
+    """
+    (list of list of str and number)-> float
+    returns the average of the grades in the nested list
+
+    >>> calculate_average([['Assignment',80],['A1',90],['A2',80]])
+    83.33.0
+    >>> calculate_average([['A1',90],['A2',80]])
+    85.0
+
+    """
+    total = 0
+    for i in range(len(asn_grade)):
+        total += asn_grade[i][1]
+    return total / len(asn_grade)
+
+
+print(calculate_average([['Assignment', 80], ['A1', 90], ['A2', 80]]))
+print(calculate_average([['A1', 90], ['A2', 80]]))
+
+
+def average_grades(grades):
+    """(list of list of numbers)->list of floats
+    Returns a list of floats which are the average of the various list items of grades
+    >>> average_grades([[70,75,80],[70,80,90,100],[80,100]])
+    [75.0,85.0,90.0]
+    """
+    grade_averages = []
+    for i in grades:
+        num_sum = 0
+        for j in i:
+            num_sum += j
+        grade_averages.append(num_sum / len(i))
+    return grade_averages
+
+
+print(average_grades(
+    [[70, 75, 80], [70, 80, 90, 100], [80, 100]]))

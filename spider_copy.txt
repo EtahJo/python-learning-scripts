@@ -1,0 +1,3 @@
+copy/nThis is a file I am creating to test
+This is to test how to read files in oython
+This will help me practice may coding skills
